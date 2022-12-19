@@ -30,7 +30,7 @@ class CreateEmployeeRequest extends FormRequest
             'gender' => 'required|string|in:MALE,FEMALE',
             'age' => 'required|integer',
             'phone' => 'required|string|max:255',
-            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'team_id' => 'required|integer|exists:teams,id',
             'role_id' => 'required|integer|exists:roles,id',
         ];
